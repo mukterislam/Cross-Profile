@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212">
+
+    <!-- ডুয়াল প্যানেল এরিয়া -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- বাম পাশ: Personal Storage -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#181818">
+
+            <!-- Personal হেডার ও কন্ট্রোল -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="#212121"
+                android:padding="4dp">
+
+                <ImageButton
+                    android:id="@+id/btnBackPersonal"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_revert"
+                    app:tint="#66BB6A" />
+
+                <ImageButton
+                    android:id="@+id/btnNewFolderPersonal"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_add"
+                    app:tint="#66BB6A" />
+
+                <HorizontalScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scrollbars="none"
+                    android:layout_marginStart="4dp">
+
+                    <TextView
+                        android:id="@+id/tvPersonalPath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textColor="#E0E0E0"
+                        android:textSize="11sp"
+                        android:singleLine="true" />
+                </HorizontalScrollView>
+
+                <ImageButton
+                    android:id="@+id/btnToggleHiddenPersonal"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_view"
+                    app:tint="#888888" />
+
+                <ImageButton
+                    android:id="@+id/btnSortPersonal"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_sort_by_size"
+                    app:tint="#66BB6A" />
+            </LinearLayout>
+
+            <!-- Personal স্টোরেজ স্পেস ইন্ডিকেটর -->
+            <TextView
+                android:id="@+id/tvPersonalStorageInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1B1B1B"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="ফ্রি: 0 GB / মোট: 0 GB"
+                android:textColor="#81C784"
+                android:textSize="9sp" />
+
+            <ListView
+                android:id="@+id/lvPersonal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#222222"
+                android:dividerHeight="1dp" />
+        </LinearLayout>
+
+        <!-- মাঝখানের ডিভাইডার লাইন -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#333333" />
+
+        <!-- ডান পাশ: Work Storage -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#181818">
+
+            <!-- Work হেডার ও কন্ট্রোল -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="#212121"
+                android:padding="4dp">
+
+                <ImageButton
+                    android:id="@+id/btnBackWork"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_revert"
+                    app:tint="#42A5F5" />
+
+                <ImageButton
+                    android:id="@+id/btnNewFolderWork"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_add"
+                    app:tint="#42A5F5" />
+
+                <HorizontalScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scrollbars="none"
+                    android:layout_marginStart="4dp">
+
+                    <TextView
+                        android:id="@+id/tvWorkPath"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Work Storage"
+                        android:textColor="#E0E0E0"
+                        android:textSize="11sp"
+                        android:singleLine="true" />
+                </HorizontalScrollView>
+
+                <ImageButton
+                    android:id="@+id/btnToggleHiddenWork"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_view"
+                    app:tint="#888888" />
+
+                <ImageButton
+                    android:id="@+id/btnSortWork"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_sort_by_size"
+                    app:tint="#42A5F5" />
+            </LinearLayout>
+
+            <!-- Work স্টোরেজ স্পেস ইন্ডিকেটর -->
+            <TextView
+                android:id="@+id/tvWorkStorageInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#1B1B1B"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:text="ফ্রি: 0 GB / মোট: 0 GB"
+                android:textColor="#64B5F6"
+                android:textSize="9sp" />
+
+            <ListView
+                android:id="@+id/lvWork"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#222222"
+                android:dividerHeight="1dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- বটম বার: মাত্র দুটি অপশন বাটন -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#1E1E1E">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPersonalToWork"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:text="Personal ➔ Work"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="8dp"
+            app:backgroundTint="#2E7D32"
+            android:layout_marginEnd="6dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnWorkToPersonal"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:text="Work ➔ Personal"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:cornerRadius="8dp"
+            app:backgroundTint="#1565C0"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+</LinearLayout>

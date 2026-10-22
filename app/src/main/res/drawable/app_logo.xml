@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cross Profile অ্যাপের একক ভেক্টর লোগো (ডার্ক ব্যাকগ্রাউন্ড, পার্সোনাল/ওয়ার্ক নোড এবং ক্রস-ব্রিজ অন্তর্ভুক্ত) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- গোলাকার ডার্ক ব্যাকগ্রাউন্ড বেস -->
+    <path
+        android:fillColor="#18181C"
+        android:pathData="M54,4 A50,50 0 1,1 53.9,4 Z" />
+
+    <!-- ব্যাকগ্রাউন্ড বর্ডার রিং -->
+    <path
+        android:strokeColor="#2C2C35"
+        android:strokeWidth="2"
+        android:pathData="M54,6 A48,48 0 1,1 53.9,6 Z" />
+
+    <!-- পার্সোনাল প্রোফাইল কার্ড (বাম পাশের সবুজ কার্ড) -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M24,40 C24,36.7 26.7,34 30,34 L42,34 C45.3,34 48,36.7 48,40 L48,68 C48,71.3 45.3,74 42,74 L30,74 C26.7,74 24,71.3 24,68 Z" />
+
+    <!-- পার্সোনাল ইউজার আইকন -->
+    <!-- মাথা -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M36,44 A4,4 0 1,0 36,36 A4,4 0 0,0 36,44 Z" />
+    <!-- শরীর -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M36,47 C32.7,47 29,48.5 29,51.5 L29,54 L43,54 L43,51.5 C43,48.5 39.3,47 36,47 Z" />
+
+    <!-- ওয়ার্ক প্রোফাইল কার্ড (ডান পাশের নীল কার্ড) -->
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M60,40 C60,36.7 62.7,34 66,34 L78,34 C81.3,34 84,36.7 84,40 L84,68 C84,71.3 81.3,74 78,74 L66,74 C62.7,74 60,71.3 60,68 Z" />
+
+    <!-- ওয়ার্ক ব্রিফকেস আইকন -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M76,43 L73,43 L73,40 C73,38.9 72.1,38 71,38 L67,38 C65.9,38 65,38.9 65,40 L65,43 L62,43 C60.9,43 60,43.9 60,45 L60,52 C60,53.1 60.9,54 62,54 L76,54 C77.1,54 78,53.1 78,52 L78,45 C78,43.9 77.1,43 76,43 Z M67,40 L71,40 L71,43 L67,43 Z" />
+
+    <!-- ক্রস ট্রান্সফার ব্রিজ: ওপরের ডানমুখী সবুজ তীর (Personal ➔ Work) -->
+    <path
+        android:fillColor="#66BB6A"
+        android:pathData="M44,48 L62,48 L62,44 L68,50 L62,56 L62,52 L44,52 Z" />
+
+    <!-- ক্রস ট্রান্সফার ব্রিজ: নিচের বামমুখী নীল তীর (Work ➔ Personal) -->
+    <path
+        android:fillColor="#42A5F5"
+        android:pathData="M64,60 L46,60 L46,56 L40,62 L46,68 L46,64 L64,64 Z" />
+
+</vector>
